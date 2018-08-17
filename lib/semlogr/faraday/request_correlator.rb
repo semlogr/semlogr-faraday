@@ -10,7 +10,7 @@ module Semlogr
       end
 
       def call(env)
-        correlation_id = Semlogr::Context::LogContext.get_property(@id_property)
+        correlation_id = Semlogr::LogContext.get_property(@id_property)
         env[:request_headers][@id_header] = correlation_id if correlation_id
 
         @app.call(env)
