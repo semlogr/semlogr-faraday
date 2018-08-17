@@ -15,7 +15,7 @@ module Semlogr
           .to receive(:call)
           .and_return(expected_result)
 
-        expect(Semlogr::Context::LogContext)
+        expect(Semlogr::LogContext)
           .to receive(:get_property)
           .with(:correlation_id)
           .and_return(correlation_id)
