@@ -29,9 +29,13 @@ provide a full end to end proprogation of correlation ids between your services.
 ```ruby
 require 'semlogr/faraday'
 
-connection = Faraday.new 'http://test.com' do |conn|
-  conn.request :semlogr_request_correlator
+faraday = Faraday.new 'http://test.com' do |c|
+  c.request :semlogr_request_correlator
+
+  c.adapter Faraday.default_adapter
 end
+
+faraday.get('/test')
 ```
 
 ## Development
