@@ -1,9 +1,12 @@
 require 'semlogr'
+require 'faraday'
 
 module Semlogr
   module Faraday
-    class RequestCorrelator
+    class RequestCorrelator < ::Faraday::Middleware
       def initialize(app, opts = {})
+        super(app)
+
         @app = app
         @id_property = opts[:id_property] || :correlation_id
         @id_header = opts[:id_header] || 'X-Correlation-Id'
