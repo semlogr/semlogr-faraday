@@ -1,4 +1,6 @@
 ![Codeship Status for semlogr/semlogr-faraday](https://codeship.com/projects/48b7dd70-8499-0136-e016-5e4de864be62/status?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/41377026a92435f4ffa1/maintainability)](https://codeclimate.com/github/semlogr/semlogr-faraday/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/41377026a92435f4ffa1/test_coverage)](https://codeclimate.com/github/semlogr/semlogr-faraday/test_coverage)
 
 # Semlogr integration for Faraday
 
